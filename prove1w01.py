@@ -14,8 +14,7 @@ def main():
     print_board(board_spaces, board_dimension, player1_spaces, player2_spaces)
 
     for turn in range(board_dimension * board_dimension):
-        player_turn = (turn % 2) + 1
-        
+        player_turn = (turn % 2) + 1        
         position = 0
         while position == 0 or  position == 'o' :
             entered_position = input("Player " + get_player_character(player_turn) + " is your turn, please enter a position number: ")
@@ -43,7 +42,6 @@ def main():
         if winner > 0:
             print(f"\nPlayer {get_player_character(player_turn)} wins!. End of the match.\n")
             break
-
 
     if winner == 0:
         print("\nNobody wins :), You both are awesome players!\n")
